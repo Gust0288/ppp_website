@@ -1,0 +1,335 @@
+@font-face {
+  font-family: "agbalumo";
+  src: url("fonts/Agbalumo-Regular.ttf");
+}
+@font-face {
+  font-family: "crimson";
+  src: url("fonts/CrimsonText-Italic.ttf");
+}
+@font-face {
+  font-family: "krungthep";
+  src: url("fonts/Krungthep.ttf");
+}
+html,
+body {
+  overscroll-behavior: none;
+}
+body {
+  background: linear-gradient(to right, #171617, #1e2d42);
+  margin: 0;
+  cursor: none;
+}
+#custom-cursor {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(171, 163, 163, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999;
+}
+#profil_billede {
+  border-radius: 20px;
+}
+h3,
+h2,
+h1,
+h4,
+p,
+ul {
+  color: rgb(216, 219, 222);
+  font-family: "Dosis", sans-serif;
+}
+h1 {
+  text-align: center;
+  font-size: 35px;
+  margin: 0 0 20px 0;
+}
+li {
+  padding: 10px;
+}
+#navn {
+  text-align: left;
+  margin: 0;
+}
+#lang {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#intro {
+  display: flex;
+  background: linear-gradient(to right, #1e2d42, #171617);
+  border-radius: 20px;
+}
+#intro img {
+  width: 56%;
+}
+#intro,
+#kompetencer,
+#projekter,
+#cta {
+  margin: 200px 200px 200px 200px;
+  padding: 30px 30px 30px 30px;
+}
+img {
+  width: auto;
+  height: auto;
+}
+#introTekst {
+  font-size: 20px;
+  padding-right: 30px;
+}
+#kompetencer {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border-radius: 20px;
+}
+#projekter {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  /* margin-top: 200px;
+  margin-bottom: 50px; */
+}
+#cta {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border-radius: 20px;
+  margin-top: 0px;
+}
+#cta,
+#projekter,
+#kompetencer {
+  /* background-color: #1e2d42; */
+  background-color: rgba(30, 45, 66, 0.5);
+}
+#projekter p {
+  margin: 20px 50px 0px 50px;
+  font-size: 25px;
+}
+#projektList {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+#prj1_img,
+#prj2_img,
+#prj3_img {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  gap: 2em;
+}
+#prj1_img img,
+#prj2_img img,
+#prj3_img img {
+  width: 50px;
+  height: 50px;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+#prj1_img img:hover,
+#prj2_img img:hover,
+#prj3_img img:hover {
+  width: 500px;
+  height: 300px;
+}
+
+#javah2:hover,
+#porth2:hover,
+#olesh2:hover {
+  background: linear-gradient(to right, #171617, #1e2d42);
+}
+#javah2,
+#porth2,
+#olesh2 {
+  text-align: center;
+  background: linear-gradient(to right, #1e2d42, #171617);
+  border-radius: 40px;
+  padding: 20px;
+}
+
+#olesh2 {
+  font-family: "agbalumo";
+}
+#javah2 {
+  font-family: "crimson";
+}
+#porth2 {
+  font-family: "krungthep";
+}
+
+#prj1_all,
+#prj2_all,
+#prj3_all {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 0 0;
+  gap: 2em;
+}
+.links a {
+  text-decoration: none;
+  text-decoration: underline;
+  font-family: "Dosis", sans-serif;
+  color: antiquewhite;
+}
+
+#cta_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5em;
+}
+#cta_links a {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#diMark_kode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10em;
+}
+.li-tags {
+  font-size: 20px;
+}
+#star {
+  display: flex;
+  justify-content: end;
+}
+#kontakt_boks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#kontakt {
+  gap: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll_arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dosis-Font {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 5;
+  font-style: normal;
+}
+
+@media (max-width: 450px) {
+  #intro {
+    flex-direction: column;
+    height: auto;
+  }
+  #intro img {
+    width: 100%;
+    height: auto;
+  }
+  #diMark_kode {
+    flex-direction: column;
+    gap: 2em;
+  }
+  #kontakt {
+    gap: 1em;
+  }
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  li {
+    padding: 8px;
+  }
+
+  /* You can adjust other font sizes as needed */
+
+  /* Additional adjustments for smaller screens */
+
+  #intro {
+    margin: 20px;
+  }
+
+  #intro img {
+    border-radius: 10px; /* Adjust border-radius for smaller screens */
+  }
+
+  #introTekst {
+    font-size: 16px;
+    padding-right: 15px;
+  }
+
+  #kompetencer,
+  #projekter,
+  #cta {
+    margin: 20px;
+    padding: 15px;
+    margin-bottom: 138px;
+  }
+
+  #projekter p {
+    margin: 10px 25px 0 25px;
+    font-size: 18px;
+  }
+
+  #prj1_img img,
+  #prj2_img img,
+  #prj3_img img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #links {
+    gap: 1em;
+  }
+
+  #cta_links a {
+    font-size: 20px;
+  }
+
+  .li-tags {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  #scroll_arrow img {
+    width: 30px;
+    height: auto;
+  }
+}
