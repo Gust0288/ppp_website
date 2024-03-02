@@ -269,6 +269,9 @@ img {
     flex-direction: column;
     height: auto;
   }
+  #custom-cursor {
+    display: none;
+  }
   #intro img {
     width: 100%;
     height: auto;
