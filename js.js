@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
           location: ".kompetencer_1",
         },
         {
-          text: "Code",
+          text: "Coding",
           location: ".kompetencer_2",
         },
         {
