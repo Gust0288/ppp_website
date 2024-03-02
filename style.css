@@ -249,9 +249,16 @@ img {
   padding: 20px;
 }
 #language {
-  background-color: #171617;
+  background: linear-gradient(to right, #1e2d42, #171617);
   border: none;
   color: rgb(216, 219, 222);
+  width: 150px;
+  height: 25px;
+  border-radius: 25px;
+  padding-left: 10px;
+}
+.scroll_arrow:hover {
+  cursor: none;
 }
 #language:hover {
   cursor: none;

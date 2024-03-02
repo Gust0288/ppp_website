@@ -184,8 +184,6 @@ document.addEventListener("mousemove", function (e) {
   cursor.style.top = e.pageY - cursor.offsetHeight / 2 + "px";
 });
 
-// js.js
-
 const sections = document.querySelectorAll(".fade-in-section");
 
 function handleScroll() {
@@ -194,12 +192,15 @@ function handleScroll() {
   sections.forEach((section) => {
     const sectionTop = section.getBoundingClientRect().top;
     const sectionBottom = section.getBoundingClientRect().bottom;
+    const sectionHeight = section.getBoundingClientRect().height;
 
-    const isHalfShown =
-      sectionTop < windowHeight / 2 && sectionBottom >= windowHeight / 2;
-    const isNotScrolledPast = sectionTop >= 0 || sectionBottom > 0;
+    const minimumVisibleHeight = 0.5; // Adjust this value as needed
 
-    if (isHalfShown && isNotScrolledPast) {
+    const isPartiallyVisible =
+      sectionTop <= windowHeight - minimumVisibleHeight * sectionHeight &&
+      sectionBottom >= minimumVisibleHeight * sectionHeight;
+
+    if (isPartiallyVisible) {
       section.classList.add("visible");
     } else {
       section.classList.remove("visible");
@@ -207,8 +208,15 @@ function handleScroll() {
   });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  handleScroll(); // Call handleScroll on page load
+
+  setTimeout(() => {
+    handleScroll();
+  }, 500);
+});
+
 window.addEventListener("scroll", handleScroll);
-document.addEventListener("DOMContentLoaded", handleScroll);
 
 document.addEventListener("mousemove", function (e) {
   var cursor = document.getElementById("custom-cursor");
