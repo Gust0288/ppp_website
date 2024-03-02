@@ -58,11 +58,7 @@ li {
   justify-content: center;
   align-items: center;
 }
-#intro {
-  display: flex;
-  background: linear-gradient(to right, #1e2d42, #171617);
-  border-radius: 20px;
-}
+
 #intro img {
   width: 56%;
 }
@@ -76,6 +72,12 @@ li {
 img {
   width: auto;
   height: auto;
+}
+#intro {
+  display: flex;
+  background: linear-gradient(to right, #1e2d42, #171617);
+  border-radius: 20px;
+  margin: 200px 200px 50px 200px;
 }
 #introTekst {
   font-size: 20px;
@@ -240,6 +242,19 @@ img {
   font-optical-sizing: auto;
   font-weight: 5;
   font-style: normal;
+}
+#selector {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+#language {
+  background-color: #171617;
+  border: none;
+  color: rgb(216, 219, 222);
+}
+#language:hover {
+  cursor: none;
 }
 
 @media (max-width: 450px) {
