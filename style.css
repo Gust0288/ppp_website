@@ -106,7 +106,6 @@ img {
 #cta,
 #projekter,
 #kompetencer {
-  /* background-color: #1e2d42; */
   background-color: rgba(30, 45, 66, 0.5);
 }
 #projekter p {
@@ -303,16 +302,12 @@ img {
     padding: 8px;
   }
 
-  /* You can adjust other font sizes as needed */
-
-  /* Additional adjustments for smaller screens */
-
   #intro {
     margin: 20px;
   }
 
   #intro img {
-    border-radius: 10px; /* Adjust border-radius for smaller screens */
+    border-radius: 10px;
   }
 
   #introTekst {

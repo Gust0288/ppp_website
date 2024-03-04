@@ -194,7 +194,7 @@ function handleScroll() {
     const sectionBottom = section.getBoundingClientRect().bottom;
     const sectionHeight = section.getBoundingClientRect().height;
 
-    const minimumVisibleHeight = 0.5; // Adjust this value as needed
+    const minimumVisibleHeight = 0.5;
 
     const isPartiallyVisible =
       sectionTop <= windowHeight - minimumVisibleHeight * sectionHeight &&
@@ -209,7 +209,7 @@ function handleScroll() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  handleScroll(); // Call handleScroll on page load
+  handleScroll();
 
   setTimeout(() => {
     handleScroll();
